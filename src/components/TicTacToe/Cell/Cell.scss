@@ -1,0 +1,68 @@
+$cellWidth: 100px;
+$cellHeight: 100px;
+$markSize: calc($cellWidth * 0.9);
+
+.cell {
+  position: relative;
+  width: $cellWidth;
+  height: $cellHeight;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  cursor: pointer;
+  &:first-child,
+  &:nth-child(2),
+  &:nth-child(3) {
+    border-top: none;
+  }
+  &:nth-child(3n + 1) {
+    border-left: none;
+  }
+  &:nth-child(3n + 3) {
+    border-right: none;
+  }
+  &:last-child,
+  &:nth-child(8),
+  &:nth-child(7) {
+    border-bottom: none;
+  }
+}
+
+.cell.x,
+.cell.circle {
+  cursor: not-allowed;
+}
+
+.cell.x::after,
+.cell.x::before {
+  content: "";
+
+  position: absolute;
+  width: calc($markSize * 0.15);
+  height: $markSize;
+  background-color: black;
+  top: 0;
+  left: 40%;
+}
+.cell.x::after {
+  transform: rotate(45deg);
+}
+.cell.x::before {
+  transform: rotate(-45deg);
+}
+
+.cell.circle::after,
+.cell.circle::before {
+  content: "";
+  position: absolute;
+  width: $markSize;
+  height: $markSize;
+  background-color: black;
+  border-radius: 50%;
+}
+.cell.circle::after {
+  width: calc($markSize * 0.7);
+  height: calc($markSize * 0.7);
+  background-color: white;
+}

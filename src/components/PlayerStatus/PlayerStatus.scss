@@ -1,0 +1,21 @@
+.PlayerStatus {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2rem;
+  width: 50vw;
+  .players {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .player-name {
+      letter-spacing: 1px;
+      font-size: 1.5rem;
+    }
+    .player-score {
+      margin-top: 5px;
+      font-size: 1.3rem;
+    }
+  }
+}
