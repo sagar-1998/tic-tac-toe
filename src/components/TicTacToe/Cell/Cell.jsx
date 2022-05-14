@@ -1,7 +1,7 @@
 import React from "react";
 import "./Cell.scss";
 const Cell = (props) => {
-  const { handleClick, cellData, switchTurn } = props;
+  const { handleClick, cellData } = props;
   return (
     <div
       className={`cell ${cellData.cellClassName}`}
