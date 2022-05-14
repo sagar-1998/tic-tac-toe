@@ -127,7 +127,8 @@ const TicTacToe = (props) => {
 
       <div className="board-and-status">
         <p className="turn-message">
-          {currentClass === "x" ? "Player-1 Turn" : "Player-2 Turn"}
+          {currentClass === "x" ? "Player-1 " : "Player-2 "}(
+          {currentClass === "circle" ? "O" : "X"}'s) Turn
         </p>
         <div className={`board ${currentClass}`} id="board">
           {cellData.map((el, index) => (
