@@ -78,7 +78,6 @@ const TicTacToe = (props) => {
   };
   // This function check the draw condition of the game
   const isDraw = () => {
-    console.log(cellElements);
     return [...cellElements].every((cell) => {
       return cell.classList.contains("x") || cell.classList.contains("circle");
     });

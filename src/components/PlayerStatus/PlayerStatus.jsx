@@ -9,8 +9,8 @@ const PlayerStatus = (props) => {
   ];
   return (
     <div className="PlayerStatus">
-      {playersWinnings.map((el) => (
-        <div className="players">
+      {playersWinnings.map((el, index) => (
+        <div className="players" key={index + el.title}>
           <p className="player-name">{el.title}</p>
           <p className="player-score">{el.score}</p>
         </div>
